@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Someja Nuhiu</title>
+  <style>
+    :root {
+      --primary-color: #4F46E5;
+      --secondary-color: #6366F1;
+      --text-color: #1F2937;
+      --bg-color: #5c8dbe;
+      --white: #FFFFFF;
+      --gray: #6B7280;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    header p.title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      overflow-x: auto;
+      padding: 1rem;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .experience-item,
+    .education-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-item h3,
+    .education-item h3 {
+      color: var(--secondary-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-item p.company,
+    .education-item p.school {
+      color: var(--gray);
+    }
+
+    .experience-item ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+    }
+
+    .experience-item ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-tag {
+      background: #E0E7FF;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      text-align: center;
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+
+    .project-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-tag {
+      background: #DBEAFE;
+      color: #1E40AF;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    footer {
+      background: #1F2937;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <h1>Someja Nuhiu</h1>
+    <p class="title">Future Developer</p>
+    <div class="info">
+      <span>sumejanuhiu0@gmail.com</span>
+      <span>+381 62 517113</span>
+      <span>Pristina, Kosovo</span>
+    </div>
+  </header>
+
+  <nav>
+    <ul id="nav-links">
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+
+  
+  <main>
+   
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Passionate student, skilled in modern programming languages, UI/UX design principles, and performance optimization.
+      </p>
+    </section>
+
+ 
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>no Experience</h3>
+      
+      </div>
+
+     
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-tag">HTML5</div>
+        <div class="skill-tag">CSS3</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">TailwindCSS</div>
+        <div class="skill-tag">Responsive Design</div>
+        <div class="skill-tag">Git / GitHub</div>
+        <div class="skill-tag">Figma</div>
+      </div>
+    </section>
+
+   
+ 
+
+   
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Currenty student of Computer Science</h3>
+        <p class="school">Cacttus Education</p>
+        <small>2023 – 2025</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Someja Nuhiu. All rights reserved.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Built with HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
