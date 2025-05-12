@@ -79,6 +79,7 @@
       padding-bottom: 0.3rem;
       border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     nav ul li a:hover,
@@ -122,15 +123,6 @@
       color: var(--gray);
     }
 
-    .experience-item ul {
-      margin-top: 0.5rem;
-      padding-left: 1.2rem;
-    }
-
-    .experience-item ul li {
-      margin-bottom: 0.5rem;
-    }
-
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -144,6 +136,12 @@
       text-align: center;
       font-weight: 500;
       color: var(--primary-color);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .skill-tag:hover {
+      transform: scale(1.05);
     }
 
     .project-card {
@@ -196,7 +194,6 @@
 </head>
 <body>
 
-  
   <header>
     <h1>Someja Nuhiu</h1>
     <p class="title">Future Developer</p>
@@ -209,17 +206,15 @@
 
   <nav>
     <ul id="nav-links">
-      <li><a href="#about" class="active">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
+      <li><a href="#about" class="active" onclick="handleNavClick('About')">About</a></li>
+      <li><a href="#experience" onclick="handleNavClick('Experience')">Experience</a></li>
+      <li><a href="#skills" onclick="handleNavClick('Skills')">Skills</a></li>
+      <li><a href="#projects" onclick="handleNavClick('Projects')">Projects</a></li>
+      <li><a href="#education" onclick="handleNavClick('Education')">Education</a></li>
     </ul>
   </nav>
 
-  
   <main>
-   
     <section id="about">
       <h2>About Me</h2>
       <p>
@@ -227,38 +222,31 @@
       </p>
     </section>
 
- 
     <section id="experience">
       <h2>Experience</h2>
       <div class="experience-item">
-        <h3>no Experience</h3>
-      
+        <h3>No Experience Yet</h3>
+        <p class="company">Still Learning and Growing!</p>
       </div>
-
-     
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-tag">HTML5</div>
-        <div class="skill-tag">CSS3</div>
-        <div class="skill-tag">JavaScript</div>
-        <div class="skill-tag">TailwindCSS</div>
-        <div class="skill-tag">Responsive Design</div>
-        <div class="skill-tag">Git / GitHub</div>
-        <div class="skill-tag">Figma</div>
+        <div class="skill-tag" onclick="handleSkillClick('HTML5')">HTML5</div>
+        <div class="skill-tag" onclick="handleSkillClick('CSS3')">CSS3</div>
+        <div class="skill-tag" onclick="handleSkillClick('JavaScript')">JavaScript</div>
+        <div class="skill-tag" onclick="handleSkillClick('TailwindCSS')">TailwindCSS</div>
+        <div class="skill-tag" onclick="handleSkillClick('Responsive Design')">Responsive Design</div>
+        <div class="skill-tag" onclick="handleSkillClick('Git / GitHub')">Git / GitHub</div>
+        <div class="skill-tag" onclick="handleSkillClick('Figma')">Figma</div>
       </div>
     </section>
 
-   
- 
-
-   
     <section id="education">
       <h2>Education</h2>
       <div class="education-item">
-        <h3>Currenty student of Computer Science</h3>
+        <h3>Currently Studying Computer Science</h3>
         <p class="school">Cacttus Education</p>
         <small>2023 – 2025</small>
       </div>
@@ -270,5 +258,21 @@
     <p style="margin-top: 0.5rem; font-size: 0.85rem;">Built with HTML & CSS</p>
   </footer>
 
+  <script>
+    function handleNavClick(sectionName) {
+      alert("You clicked on the " + sectionName + " section!");
+    }
+
+    function handleSkillClick(skillName) {
+      alert("You clicked on the skill: " + skillName);
+    }
+
+    document.querySelectorAll('.project-card a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert("This is a demo link. Great job checking it out!");
+      });
+    });
+  </script>
 </body>
 </html>
